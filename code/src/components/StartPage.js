@@ -7,29 +7,33 @@ import { StyledButton } from './GlobalStyles';
 import animationData from '../lotties/rabbit.json';
 
 const StartWrapper = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-max-height: 70vh;
-background: rgba(213, 146, 131, 0.59);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(3.9px);
--webkit-backdrop-filter: blur(3.9px);
-border: 1px solid rgba(213, 146, 131, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  max-height: 70vh;
+  background: rgba(213, 146, 131, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+  border: 1px solid rgba(213, 146, 131, 0.3);
   border: 2px solid yellow;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (max-width: 768px) {
+    max-height: 50vh;
+  }
 `
 const HeaderTitle = styled.h1`
-margin-right: 5rem;
-    margin-left: 5rem;
-    text-align: center;
+  margin-right: 5rem;
+  margin-left: 5rem;
+  text-align: center;
 `
 const GreetText = styled.p`
-margin-bottom: 0.5rem;
-font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 `
 
 const StartPage = () => {
@@ -63,7 +67,7 @@ const StartPage = () => {
       <GreetText>Please start by entering your name. </GreetText>
       <form onSubmit={(event) => onFormSubmit(event)}>
         <label htmlFor="user-input">
-        Whats your name?
+            Whats your name?
           <input
             id="user-input"
             type="text"
@@ -71,7 +75,8 @@ const StartPage = () => {
         </label>
         <StyledButton type="submit">START</StyledButton>
       </form>
-    </StartWrapper>)
+    </StartWrapper>
+  )
 }
 
 export default StartPage
