@@ -22,16 +22,33 @@ border: 2px solid yellow;
 padding-left: 20px;
 padding-right: 20px;
 padding-bottom: 30px;
-/* overflow: auto; */
+overflow: hidden;
+
+@media only screen and (max-width: 600px) {
+  height: auto;
+  padding-bottom: 5px;
+}
 `
 const HeaderTitle = styled.h1`
 margin-right: 1.5rem;
 margin-left: 1.5rem;
 text-align: center;
+font-size: 2rem;
+margin-bottom: 2rem;
+
+@media only screen and (max-width: 600px) {
+  font-size: 1rem;
+   margin-bottom: 1rem;
+}
 `
 const GreetText = styled.p`
-margin-bottom: 0.5rem;
-font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.5;
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
 `
 
 const StartPage = () => {
@@ -69,10 +86,11 @@ const StartPage = () => {
       <GreetText>Please start by entering your name. </GreetText>
       <form onSubmit={(event) => onFormSubmit(event)}>
         <label htmlFor="user-input">
-        Whats your name?
+          Whats your name?
           <input
             id="user-input"
             type="text"
+            placeholder="Name"
             onChange={(event) => setUsername(event.target.value)} />
         </label>
         <StyledButton type="submit">START</StyledButton>
