@@ -81,12 +81,11 @@ const StartPage = () => {
         renderer={defaultOptions.renderer}
         rendererSettings={defaultOptions.rendererSettings}
         style={{ width: '300px', height: '300px' }} />
-      <HeaderTitle>Welcome to The Rabbit Hole Labyrinth, my friend!</HeaderTitle>
+      <HeaderTitle>Welcome to The Rabbit Hole Labyrinth!</HeaderTitle>
       <GreetText> Every adventure requires a first step...</GreetText>
-      <GreetText>Please start by entering your name. </GreetText>
+      <GreetText>My friend, please begin by entering your name. </GreetText>
       <form onSubmit={(event) => onFormSubmit(event)}>
         <label htmlFor="user-input">
-          Whats your name?
           <input
             id="user-input"
             type="text"
