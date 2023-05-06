@@ -14,6 +14,10 @@ export const OuterWrapper = styled.main`
   -o-background-size: cover;
   font-family: 'Oldenburg', cursive;
   position: relative;
+  
+    @media (max-width: 600px) {
+   padding-bottom: 20px;
+  }
 `
 export const InnerWrapper = styled.section`
  width: 85%;

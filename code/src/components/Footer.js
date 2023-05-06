@@ -17,7 +17,6 @@ const Footer = () => {
     </FooterWrapper>
   )
 }
-
 const FooterWrapper = styled.div`
   margin: auto;
   padding: 0 10px;
@@ -29,12 +28,10 @@ const FooterWrapper = styled.div`
   opacity: 0.95;
 
   @media (max-width: 604px) {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
-  `
+`
 
 const IconContainer = styled.div`
   display: flex;
@@ -44,11 +41,12 @@ const IconContainer = styled.div`
 `
 
 const FooterText = styled.p`
-
-@media(max-width: 604px) {
-  font-size: 15px;
-}
+  @media(max-width: 604px) {
+    font-size: 10px;
+    margin: 5px 0;
+  }
 `
+
 const FooterImage = styled.img`
   width: 30px;
   padding-left: 5px;
@@ -60,8 +58,8 @@ const FooterImage = styled.img`
   }
 
   @media(max-width: 604px) {
-  width: 15px;
-}
-  `
+    width: 15px;
+  }
+`
 
 export default Footer;

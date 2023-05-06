@@ -8,4 +8,4 @@ We began by checking out the API on the Postman and figuring out the structure o
 
 ## View it live
 
-https://the-labyrinth-by-annika-and-fiona.netlify.app/
+https://rabbit-hole-labyrinth-annika-fiona.netlify.app/
